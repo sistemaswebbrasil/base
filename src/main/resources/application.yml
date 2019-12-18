@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: "dev"
+        
+---
+
+spring:
+  profiles: dev
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: jdbc:postgresql://localhost:5432/api
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql:true
+  
+   
+      
+    
+        
+      
